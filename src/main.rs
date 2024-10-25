@@ -1,10 +1,11 @@
 #[derive(Debug)]
 
-struct Desk {
+struct Deck {
     cards : Vec<String>,
 }
 
-impl Desk {
+impl Deck {
+    //Associated function en Deck
     fn new() -> Self {
 
         let suits = ["Hearts","Spades","Diamonds"];
@@ -22,19 +23,19 @@ impl Desk {
             cards.push(card);
         }
     }
-    //inicializacion de struct desk previo
-    /* let desk = Desk {cards};
-    return desk; */
+    //inicializacion de struct deck previo
+    /* let deck = Deck {cards};
+    return deck; */
 
     //utilizamos implicit return
-    Desk { cards }
+    Deck { cards }
     
     }
 }
 
 fn main() {
-
-    let desk = Desk::new();
+    //inicializacióń de una Associated function 
+    let deck = Deck::new();
     
-    println!("Your cards are: {:#?}", desk);
+    println!("Your cards are: {:#?}", deck);
 }
